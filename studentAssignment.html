@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="./home.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=ABeeZee&family=Archivo:wght@100&family=Shippori+Antique+B1&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title>Assignments</title>
+</head>
+<body onload="displayAssignStudent()">
+	<script src="./app.js"></script>
+	<div id="assignments">
+		<header >
+		<h1>Learning Management System</h1>
+		<h4 id="h2"></h4>
+	</header>
+	<nav>
+		<ul class="nav-links">
+			<li><a href="./home.html">Home</a></li>
+			<li><a onclick="decideAssignmentPage()">Assignment</a></li>
+			<li><a onclick="decideClassPage()">Classes</a></li>
+			<li><a href="./forum.html">Discussions</a></li>
+			<li><a onclick="logout()">Log Out <i class="fa fa-sign-out" style="font-size:24px"></i></a></li>
+		</ul>
+	</nav>
+	<section>
+		<div class="menu" style="width:280px;">
+			<h6>
+            <input type="search" style="width:250px;"id="search1" onkeyup="search1()" placeholder="Search by assignment name...">
+        </h6>
+		</div>
+	</section>
+	<div id="content" ></div>
+	<script>	
+			
+			function search1(){
+
+				var x=localStorage.getItem("Username");
+				document.getElementById("h2").innerHTML="Logged in as : "+x;
+
+				var assignments=JSON.parse(localStorage.getItem("assignments"));
+				var s=document.getElementById("search1").value;
+
+				var t=document.getElementById("content");
+
+				var student=JSON.parse(localStorage.getItem("studentLoginDetails"));
+
+				var discipline=student[x][1];
+
+				if(t!=null)t.innerHTML="";
+
+					if(assignments!=null){
+							
+						for(let i=0;i<assignments.length;i++){
+
+							var t=assignments[i];
+
+							if(assignments[i].title.includes(s) && assignments[i].discipline==discipline){
+									document.getElementById("content").innerHTML+=`
+								<section>
+									<div class="sub-forum">
+										<h6><a href="./assignDetailStudent.html" onclick="setIndex(${i})">${assignments[i].title}</a></h6>
+									</div>
+									<div class="sub-forum-c1" style="width:auto;">
+										<h6>Seats Left: ${assignments[i].date}</h6>
+									</div>
+								</section>
+					`;
+							}
+							//var json = JSON.stringify(post[i]).replace(/\\/g, '\\\\');
+							}
+					}
+			}
+			</script>
+	</div>
+</body>
+</html>

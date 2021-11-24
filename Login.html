@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="./Login.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=ABeeZee&family=Archivo:wght@100&family=Shippori+Antique+B1&display=swap" rel="stylesheet">
+	<title>LMS-Login</title>
+	<style type="text/css">
+		a {
+	text-decoration: none;
+	color: grey;
+}
+	</style>
+</head>
+<body >
+	<div class="top">
+		<h1>Welcome to the Learning Management System!</h1>
+	</div>
+	<div class="bottom">
+		<a style="color:white;" href="./institutionalInfo.html">Click to view Institutional Information</a>
+	</div>
+	<div id="wrapper">
+			<div class="center" style="margin-left:20px;">
+			<h1>Admin Login</h1>
+			<form id="frm1" action="./homeAdmin.html" method="post">
+				<div class="txt_field">
+					<input type="text" name="user"  required>
+					<span></span>
+					<label>Username</label>
+				</div>
+				<div class="txt_field">
+					<input type="password" name="password"  required>
+					<span></span>
+					<label>Password</label>
+				</div>
+				<div class="pass">Forgot Password?</div>
+				<script src="./app.js"></script>
+				<input type="submit" onclick="adminLogin()" value="Login">
+				<p id="error1"></p>
+				<br>
+			</form>
+			
+		</div>
+		<div class="center">
+			<h1>Student Login</h1>
+			<form id="frm2" action="./home.html" method="post">
+				<div class="txt_field">
+					<input type="text" name="user"  required>
+					<span></span>
+					<label>Username</label>
+				</div>
+				<div class="txt_field">
+					<input type="password" name="password"  required>
+					<span></span>
+					<label>Password</label>
+				</div>
+				<div class="pass"><a href="./forgotPasswordStu.html">Forgot Password?</a></div>
+				<script src="./app.js"></script>
+				<input type="submit" onclick="studentLogin()" value="Login">
+				<p id="error2"></p>
+				<br>
+			</form>
+			
+		</div>
+		<div class="center">
+			<h1>Faculty Login</h1>
+			<form id="frm3" action="./home.html" method="post">
+				<div class="txt_field">
+					<input type="text" name="user"  required>
+					<span></span>
+					<label>Username</label>
+				</div>
+				<div class="txt_field">
+					<input type="password" name="password"  required>
+					<span></span>
+					<label>Password</label>
+				</div>
+				<div class="pass"><a href="./forgotPasswordProf.html">Forgot Password?</a></div>
+				<script src="./app.js"></script>
+				<input type="submit" onclick="profLogin()" value="Login">
+				<p id="error3"></p>
+				<br>
+			</form>
+			
+		</div>
+	</div>
+	
+</body>
+</html>

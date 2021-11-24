@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="./home.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=ABeeZee&family=Archivo:wght@100&family=Shippori+Antique+B1&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title>Create New Class</title>
+</head>
+<body onload="userF(false)">
+	<script src="./app.js"></script>
+		<script src="https://smtpjs.com/v3/smtp.js"></script>
+
+	<header >
+		<h1>Learning Management System</h1>
+		<h4 id="h2"></h4>
+	</header>
+	<nav>
+		<ul class="nav-links">
+			<li><a href="./home.html">Home</a></li>
+			<li><a onclick="decideAssignmentPage()">Assignment</a></li>
+			<li><a onclick="decideClassPage()">Classes</a></li>
+			<li><a href="./forum.html">Discussions</a></li>
+			<li><a onclick="logout()">Log Out <i class="fa fa-sign-out" style="font-size:24px"></i></a></li>
+		</ul>
+	</nav>
+	<div class="center">
+		<h2>Create Class</h2>
+		<form id="frm" action="./profClass.html" method="post">
+			<div class="txt_field">
+				<input type="text" name="Title"  required>
+				<span></span>
+				<label>Title <i>E.g. Class_name-Professor_name</i></label>
+			</div>
+			<div class="txt_field">
+				<input type="number" name="No. of seats"  required>
+				<span></span>
+				<label>No. of seats</label>
+			</div>
+			<div class="txt_field">
+				<select name="" id="select" onmouseup="slots(this)"required>
+					<option value="CS">Computer Science</option>
+					<option value="EEE">EEE</option>
+				</select>
+			</div>
+			<div class="txt_field" id="">
+				<select name="" id="slot" required>
+				</select>
+			</div>
+			<input type="button" onclick="postClass()" value="Submit">
+			<br>
+		</form>
+		<script>
+			function slots(e) {
+  				
+  				var slots=JSON.parse(localStorage.getItem("Slots"));
+
+  				if(slots!=null);
+  				else 
+  					slots={};
+
+  				var x=document.getElementById("frm");
+				var a=x.elements[2].value;
+  				
+  				if(slots.hasOwnProperty(a)==true){
+  					
+  					document.getElementById("slot").innerHTML="";
+  					if(slots[a].indexOf("8 am - 9 am")==-1){
+  						document.getElementById("slot").innerHTML+=`
+  					
+						<option value="8 am - 9 am">8 am - 9 am</option>`;
+  					}
+
+  					if(slots[a].indexOf("9 am - 10 am")==-1){
+  						document.getElementById("slot").innerHTML+=`
+  					
+						<option value="9 am - 10 am">9 am - 10 am</option>`;
+  					}
+  					if(slots[a].indexOf("10 am - 11 am")==-1){
+  						document.getElementById("slot").innerHTML+=`
+  					
+						<option value="10 am - 11 am">10 am - 11 am</option>`;
+  					}
+  					if(slots[a].indexOf("11 am - 12 pm")==-1){
+  						document.getElementById("slot").innerHTML+=`
+  					
+						<option value="11 am - 12 pm">11 am - 12 pm</option>`;
+  					}
+  					if(slots[a].indexOf("12 pm - 1 pm")==-1){
+  						document.getElementById("slot").innerHTML+=`
+  					
+						<option value="12 pm - 1 pm">12 pm - 1 pm</option>`;
+  					}
+  					if(slots[a].indexOf("1 pm - 2 pm")==-1){
+  						document.getElementById("slot").innerHTML+=`
+  					
+						<option value="1 pm - 2 pm">1 pm - 2 pm</option>`;
+  					}
+  					if(slots[a].indexOf("2 pm - 3 pm")==-1){
+  						document.getElementById("slot").innerHTML+=`
+  					
+						<option value="2 pm - 3 pm">2 pm - 3 pm</option>`;
+  					}
+  					if(slots[a].indexOf("3 pm - 4 pm")==-1){
+  						document.getElementById("slot").innerHTML+=`
+  					
+						<option value="3 pm - 4 pm">3 pm - 4 pm</option>`;
+  					}
+  					if(slots[a].indexOf("4 pm - 5 pm")==-1){
+  						document.getElementById("slot").innerHTML+=`
+  					
+						<option value="4 pm - 5 pm">4 pm - 5 pm</option>`;
+  					}
+
+  				}else{
+
+  					document.getElementById("slot").innerHTML=`
+  					
+						<option value="8 am - 9 am">8 am - 9 am</option>
+						<option value="9 am - 10 am">9 am - 10 am</option>
+						<option value="10 am - 11 am">10 am - 11 am</option>
+						<option value="11 am - 12 pm">11 am - 12 pm</option>
+						<option value="12 pm - 1 pm">12 pm - 1 pm</option>
+						<option value="1 pm - 2 pm">1 pm - 2 pm</option>
+						<option value="2 pm - 3 pm">2 pm - 3 pm</option>
+						<option value="3 pm - 4 pm">3 pm - 4 pm</option>
+						<option value="4 pm - 5 pm">4 pm - 5 pm</option>
+					`;
+  				}
+			};
+		</script>
+	</div>
+</body>
+</html>

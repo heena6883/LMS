@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="./home.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=ABeeZee&family=Archivo:wght@100&family=Shippori+Antique+B1&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title>Add new user</title>
+</head>
+<body onload="userF(false)">
+	<script src="./app.js"></script>
+	<header >
+		<h1>Learning Management System</h1>
+		<h4 id="h2"></h4>
+	</header>
+	<nav>
+		<ul class="nav-links">
+			<li><a onclick="logout()">Log Out <i class="fa fa-sign-out" style="font-size:24px"></i></a></li>
+		</ul>
+	</nav>
+	<div class="center">
+		<h2>New user details</h2>
+		<form id="frm" action="./studentData.html" method="post">
+			<div class="txt_field">
+				<input type="text" name="Username"  required>
+				<span></span>
+				<label>Username</label>
+			</div>
+			<div class="txt_field">
+				<input type="text" name="Password"  required>
+				<span></span>
+				<label>Password</label>
+			</div>
+			<div class="txt_field">
+				<select name="" id="" required>
+					<option value="CS">Computer Science</option>
+					<option value="EEE">EEE</option>
+				</select>
+			</div>
+			<div class="txt_field">
+				<input type="text" name="email"  required>
+				<span></span>
+				<label>E-mail</label>
+			</div>
+			<script src="./app.js"></script>
+			<input type="submit" onclick="addStudentDetail()" value="Submit">
+			<br>
+		</form>
+		
+	</div>
+</body>
+</html>

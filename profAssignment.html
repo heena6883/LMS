@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="./home.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=ABeeZee&family=Archivo:wght@100&family=Shippori+Antique+B1&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title>Assignments</title>
+</head>
+<body onload="displayAssignProf()">
+	<script src="./app.js"></script>
+	<div id="assignments">
+		<header >
+		<h1>Learning Management System</h1>
+		<h4 id="h2"></h4>
+	</header>
+	<nav>
+		<ul class="nav-links">
+			<li><a href="./home.html">Home</a></li>
+			<li><a onclick="decideAssignmentPage()">Assignment</a></li>			
+			<li><a onclick="decideClassPage()">Classes</a></li>
+			<li><a href="./forum.html">Discussions</a></li>
+			<li><a onclick="logout()">Log Out <i class="fa fa-sign-out" style="font-size:24px"></i></a></li>
+		</ul>
+	</nav>
+	<section>
+		<div class="menu" style="width:auto; height:auto;">
+			<h6 id="h" ><a href="./createAssign.html" ><i class="fa fa-plus" style="font-size:15px"></i> Create New Assignment</a></h6>
+		</div>
+	</section>
+	<section>
+		<div class="menu" style="width:auto;">
+			<h6>
+            <input type="search" id="search1" onkeyup="search1()" placeholder="Search by title...">
+        </h6>
+		</div>
+	</section>
+	<section>
+		<div class="menu" style="width:auto;">
+			<h6>
+            <input type="search" id="search2" onkeyup="search2()" placeholder="Search by discipline...">
+        </h6>
+		</div>
+	</section>
+	<div id="content"></div>
+	<script>			
+			
+			function search1(){
+
+				var x=localStorage.getItem("Username");
+				document.getElementById("h2").innerHTML="Logged in as : "+x;
+
+				var assignments=JSON.parse(localStorage.getItem("assignments"));
+				var s=document.getElementById("search1").value;
+
+				var t=document.getElementById("content");
+				if(t!=null)t.innerHTML="";
+
+					if(assignments!=null){
+							
+						for(let i=0;i<assignments.length;i++){
+
+							var t=assignments[i];
+
+							if(assignments[i].title.includes(s)){
+									document.getElementById("content").innerHTML+=`
+								<section>
+									<div class="sub-forum">
+										<h6><a href="./assignDetailProf.html" onclick="setIndex(${i})">${assignments[i].title}</a></h6>
+									</div>
+									<div class="sub-forum-c1">
+										<h6>${assignments[i].date}</h6>
+									</div>
+									<div class="sub-forum-c1">
+										<h6>${assignments[i].discipline}</h6>
+									</div>
+								</section>
+					`;
+							}
+							//var json = JSON.stringify(post[i]).replace(/\\/g, '\\\\');
+							}
+					}
+			}
+
+			function search2(){
+
+				var x=localStorage.getItem("Username");
+				document.getElementById("h2").innerHTML="Logged in as : "+x;
+
+				var assignments=JSON.parse(localStorage.getItem("assignments"));
+				var s=document.getElementById("search2").value;
+
+				var t=document.getElementById("content");
+				if(t!=null)t.innerHTML="";
+
+					if(assignments!=null){
+							
+						for(let i=0;i<assignments.length;i++){
+
+							var t=assignments[i];
+
+							if(assignments[i].discipline.includes(s)){
+									document.getElementById("content").innerHTML+=`
+								<section>
+									<div class="sub-forum">
+										<h6><a href="./assignDetailProf.html" onclick="setIndex(${i})">${assignments[i].title}</a></h6>
+									</div>
+									<div class="sub-forum-c1">
+										<h6>${assignments[i].date}</h6>
+									</div>
+									<div class="sub-forum-c1">
+										<h6>${assignments[i].discipline}</h6>
+									</div>
+								</section>
+					`;
+							}
+							//var json = JSON.stringify(post[i]).replace(/\\/g, '\\\\');
+							}
+					}
+			}
+
+		
+	</script>
+	</div>
+</body>
+</html>

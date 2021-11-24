@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="./home.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=ABeeZee&family=Archivo:wght@100&family=Shippori+Antique+B1&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title>Create New Assignment</title>
+</head>
+<body onload="userF(false)">
+	<script src="./app.js"></script>
+	<script src="https://smtpjs.com/v3/smtp.js"></script>
+
+	<header >
+		<h1>Learning Management System</h1>
+		<h4 id="h2"></h4>
+	</header>
+	<nav>
+		<ul class="nav-links">
+			<li><a href="./home.html">Home</a></li>
+			<li><a onclick="decideAssignmentPage()">Assignment</a></li>
+			<li><a onclick="decideClassPage()">Classes</a></li>
+			<li><a href="./forum.html">Discussions</a></li>
+			<li><a onclick="logout()">Log Out <i class="fa fa-sign-out" style="font-size:24px"></i></a></li>
+		</ul>
+	</nav>
+	<div class="center">
+		<h2>Assignment</h2>
+		<form id="frm" action="./profAssignment.html" method="post">
+			<div class="txt_field">
+				<input type="text" name="Title"  required>
+				<span></span>
+				<label>Title <i>   E.g. Assignment_Name Professor_Name</i></label>
+			</div>
+			<div class="txt_field">
+				<textarea id="ta" name="Description" cols="150" rows="4" required></textarea>
+				<label>Write Here</label>
+			</div>
+			<div class="txt_field">
+				<select name="" id="" required>
+					<option value="CS">Computer Science</option>
+					<option value="EEE">EEE</option>
+				</select>
+			</div>
+			<script src="./app.js"></script>
+			<input type="button" onclick="postAssignF()" value="Submit">
+			<br>
+		</form>
+		
+	</div>
+</body>
+</html>
