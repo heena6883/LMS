@@ -232,22 +232,28 @@ function logout(){
 	location.replace("./Login.html");
 }
 
-function forgotPAsswordStu(){
+function forgotPasswordStu(){
 
 	var x=document.getElementById("frm").elements[0].value;
 
 	var studentDetails=JSON.parse(localStorage.getItem("studentLoginDetails"));
 	
-
+	if(studentDetails.hasOwnProperty(x)){
 	Email.send({
 			SecureToken : "d298dbd7-28d2-4983-9e26-15e2a844112d",
 			To : studentDetails[x][2],
 			From : "learningmanagementsystem.edu@gmail.com",
 			Subject: "Password Recovery",
-			Body:"Your password is: "+ studentLoginDetails[x][0],
+			Body:"Your password is: "+ studentDetails[x][0],
 			}).then(function (message) {
 			location.replace("./Login.html");
 			});
+		}else{
+			document.getElementById("Stu").innerHTML+=`
+				Username doesn't exist!
+			`;
+			document.getElementById("frm").reset();
+		}
 
 }
 
@@ -258,7 +264,8 @@ function forgotPasswordProf(){
 	var profDetails=JSON.parse(localStorage.getItem("profLoginDetails"));
 	
 
-	Email.send({
+	if(profDetails.hasOwnProperty(x)){
+		Email.send({
 			SecureToken : "d298dbd7-28d2-4983-9e26-15e2a844112d",
 			To : profDetails[x][2],
 			From : "learningmanagementsystem.edu@gmail.com",
@@ -267,6 +274,13 @@ function forgotPasswordProf(){
 			}).then(function (message) {
 			location.replace("./Login.html");
 			});
+		}else{
+			document.getElementById("prof").innerHTML+=`
+				Username doesn't exist!
+			`;
+			document.getElementById("frm").reset();
+		}
+	
 }
 function userF(y){
 	var x=localStorage.getItem("Username");
