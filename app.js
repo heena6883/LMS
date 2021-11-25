@@ -612,9 +612,9 @@ function createDissInAssign(){
 			}).then(function (message) {
 
 			if(Role=="prof")
-			location.replace("./assignDetailStudent.html");
-			else 
 			location.replace("./assignDetailProf.html");
+			else 
+			location.replace("./assignDetailStudent.html");
 			}); ;;
 	
 	}
