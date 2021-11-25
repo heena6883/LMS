@@ -1126,8 +1126,7 @@ function classDetailStudent(){
 			</div>
 		</section>`;
 
-		classes[index].studentsApproved.push(x);
-		localStorage.setItem('classes',JSON.stringify(classes));
+		
 	}else{
 		document.getElementById("classes").innerHTML+=`
 		<section>     
