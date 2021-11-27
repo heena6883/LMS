@@ -16,8 +16,8 @@ $ git clone https://github.com/heena6883/LMS.git
 
 The login credentials of the admin have been hardcoded to provide an entry point to the portal. The admin credentials are :
 
-**Username :** admin
-**Password:** 123
+- Username: admin
+- Password: 123
 
 
 ## Feature set
