@@ -8,10 +8,11 @@ It is hosted at [Heroku.](https://lms-learningmanagementsystem.herokuapp.com/)
 
 ## How to install on your local
 
-1. Clone the repository
+1. Clone the repository 
 ```
 $ git clone https://github.com/heena6883/LMS.git
 ```
+2. Click on Login.html and you're good to go.
 
 ## Feature set
 
@@ -117,8 +118,4 @@ The application has been deployed on [Heroku](https://lms-learningmanagementsyst
 
 - smtp.js has been used to send emails whenever an assignment, class or discussion is posted since there’s no direct way to send emails using javascript. The only limitation is that smtp.js allows only 100 mails to be sent per day.
 
-- If some error is found while posting discussion, class or assignment, that might be due to this limitation.
-
-- Since javascript is a client-side language, there was no direct way of using a database with it and hence, localstorage has been used for storing data for this application. 
-It was not possible to upload and retrieve files from local storage as it stores the path to the file in the user’s system. This limitation didn’t allow to add the option of uploading files in the assignment section by the professor and submitting files by the students.. 
-
+- If some error is found while posting discussion, class or assignment, that might be due to above limitation.
