@@ -1,32 +1,34 @@
-# **Introduction**
+# **LMS - Learning Management System**
 
-#### Learning Management System(LMS) is a user-friendly ,multi-functional and easy-accessible platform that delivers an array of features ranging from discussions to assignments to class scheduling and makes the interaction between students and the professors smoothless by providing effortless delivery, management and assessment in the online mode.
+## **Introduction**
 
-# Feature set
+Learning Management System(LMS) is a user-friendly ,multi-functional and easy-accessible platform that delivers an array of features ranging from discussions to assignments to class scheduling and makes the interaction between students and the professors smoothless by providing effortless delivery, management and assessment in the online mode.
+
+## Feature set
 
 The Learning Management System (LMS) provides the following features:
 
- ## Admin Section: 
+ 1. Admin Section: 
 
-#### This section allows the admin to insert the login credentials of the professors and the students enrolled in the institution.
-#### The login credentials include Username, Password, Discipline and the registered email-id. Therefore a professor or a student can access the portal using the login credentials provided to them by the admin. 
-#### It also allows the admin to delete the login credentials of a user in case he/she isn’t enrolled anymore in the institution.
+- This section allows the admin to insert the login credentials of the professors and the students enrolled in the institution.
+- The login credentials include Username, Password, Discipline and the registered email-id. Therefore a professor or a student can access the portal using the login credentials provided to them by the admin. 
+- It also allows the admin to delete the login credentials of a user in case he/she isn’t enrolled anymore in the institution.
 
-## Login:
+2. Login:
 
-This feature allows only the registered students and professors to access the portal using login credentials provided to them by the administrator.
+- This feature allows only the registered students and professors to access the portal using login credentials provided to them by the administrator.
 
-## Forgot Password: 
+3. Forgot Password: 
 
-It may happen that the professor or student may forget his/her login credentials. This feature allows them to retrieve their password by providing their username and clicking on it.
- An email with his/her login credentials will be sent to only his/her registered email id.
+- It may happen that the professor or student may forget his/her login credentials. This feature allows them to retrieve their password by providing their username and clicking on it.
+ - An email with his/her login credentials will be sent to only his/her registered email id.
 
 
-## Assignment Section:
+3. Assignment Section:
 
 This feature has two aspects to it. 
 
-Professor’s View:
+- Professor’s View:
 
 The first one is the professor aspect where a professor can create a new assignment or delete an existing assignment. 
 The professor can specify the discipline for which the assignment is created.  
