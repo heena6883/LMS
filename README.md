@@ -14,6 +14,12 @@ $ git clone https://github.com/heena6883/LMS.git
 ```
 2. Click on Login.html and you're good to go.
 
+(The login credentials of the admin have been hardcoded to provide an entry point to the portal. The admin credentials are :
+
+Username : admin
+Password: 123
+)
+
 ## Feature set
 
 The Learning Management System (LMS) provides the following features:
