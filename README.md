@@ -90,7 +90,7 @@ This section has two views- the professor view and the student view.
 
 ## Technical Stack Used:
 
-**Frontend:** HTML/CSS
-**Backend:** Pure Javascript
+- **Frontend:** HTML/CSS
+- **Backend:** Pure Javascript
 
 Smtp.js has been used for mailing service since there is no direct way of sending mails from javascript. (It has a restriction of sending 100 emails per day.)
