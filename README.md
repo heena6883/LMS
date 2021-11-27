@@ -8,7 +8,7 @@ Learning Management System(LMS) is a user-friendly ,multi-functional and easy-ac
 
 The Learning Management System (LMS) provides the following features:
 
- **1. Admin Section: **
+ **1. Admin Section:**
 
 - This section allows the admin to insert the login credentials of the professors and the students enrolled in the institution.
 - The login credentials include Username, Password, Discipline and the registered email-id. Therefore a professor or a student can access the portal using the login credentials provided to them by the admin. 
@@ -24,7 +24,7 @@ The Learning Management System (LMS) provides the following features:
  - An email with his/her login credentials will be sent to only his/her registered email id.
 
 
-**3. Assignment Section:**
+**4. Assignment Section:**
 
 This feature has two aspects to it. 
 
@@ -43,7 +43,7 @@ This feature has two aspects to it.
 - The students and professors both can create new discussions under assignments and can reply to the discussions posted by other students or professors. 
 - An email is sent to all the concerned students and the professors whenever a new assignment or a new discussion under an assignment is posted.
 
-**4. Classes Section:**
+**5. Classes Section:**
 
 This section has two views- the professor view and the student view.
 
@@ -60,37 +60,37 @@ This section has two views- the professor view and the student view.
 
 - Both the views include filters to search the classes by either title or discipline.
 
-**5. Class Scheduler:** 
+**6. Class Scheduler:** 
 
 - This feature comes under the classes section. 
 - Whenever a professor tries to create a class, it will display only the time slots which are free for that discipline i.e. it will not display the time slots for which a class has already been scheduled for that discipline.
 
-**6. Discussions Section:**
+**7. Discussions Section:**
 
 - This section allows the students and professors to post general discussions. 
 - Any student or prof can post and reply to any discussion. 
 - An email is sent to all the students and professors whenever a general discussion is posted.
 
-**7. Notification Emails:**
+**8. Notification Emails:**
 
 - This is not an explicit feature but an implicit one. 
 - The mails are sent whenever a professor creates a new assignment or a new class, a student or a professor creates a new discussion or replies to an existing one, and when a user uses the forget password feature.
 
-**8. Institutional Info:**
+**9. Institutional Info:**
 
 - This feature allows the users of the portal to access the institutional info.
 - It displays the name of the institute, total number and details of professors who have access to the portal, total number and details of students who have access to the portal and the disciplines offered by the institute.
 - The data is accessed dynamically from local storage and displayed to the users.
 
 
-**9. One user per browser access:**
+**10. One user per browser access:**
 
 - This feature allows only one user to access the portal at a time in a browser i.e. if a user is already logged into the portal and tries to log in through another tab, he/she will encounter an already logged in message.
 - This could be done using the cookies but since cookies work with the servers and local cookies has restrictions in some browsers, I’ve written a function checkUsername() which works similarly to cookies.
 
-**2. Technical Stack Used:** 
+## Technical Stack Used:
 
-Frontend: HTML/CSS
-Backend: Pure Javascript
+**Frontend:** HTML/CSS
+**Backend:** Pure Javascript
 
 Smtp.js has been used for mailing service since there is no direct way of sending mails from javascript. (It has a restriction of sending 100 emails per day.)
