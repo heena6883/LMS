@@ -4,6 +4,8 @@
 
 Learning Management System(LMS) is a user-friendly ,multi-functional and easy-accessible platform that delivers an array of features ranging from discussions to assignments to class scheduling and makes the interaction between students and the professors smoothless by providing effortless delivery, management and assessment in the online mode.
 
+It is hosted at [Heroku.](https://lms-learningmanagementsystem.herokuapp.com/)
+
 ## Feature set
 
 The Learning Management System (LMS) provides the following features:
@@ -94,3 +96,22 @@ This section has two views- the professor view and the student view.
 - **Backend:** Pure Javascript
 
 Smtp.js has been used for mailing service since there is no direct way of sending mails from javascript. (It has a restriction of sending 100 emails per day.)
+
+## Deployment Strategy:
+
+The application has been deployed on [Heroku](https://lms-learningmanagementsystem.herokuapp.com/) mainly because it provides free, hassle-free application, deployment, scaling and Management.
+
+## Limitations:
+
+- The login credentials of the admin have been hardcoded to provide an entry point to the portal. The admin credentials are :
+
+  - Username : admin
+  - Password: 123
+
+- smtp.js has been used to send emails whenever an assignment, class or discussion is posted since there’s no direct way to send emails using javascript. The only limitation is that smtp.js allows only 100 mails to be sent per day.
+
+- If some error is found while posting discussion, class or assignment, that might be due to this limitation.
+
+- Since javascript is a client-side language, there was no direct way of using a database with it and hence, localstorage has been used for storing data for this application. 
+It was not possible to upload and retrieve files from local storage as it stores the path to the file in the user’s system. This limitation didn’t allow to add the option of uploading files in the assignment section by the professor and submitting files by the students.. 
+
