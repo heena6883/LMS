@@ -6,6 +6,11 @@ Learning Management System(LMS) is a user-friendly ,multi-functional and easy-ac
 
 It is hosted at [Heroku.](https://lms-learningmanagementsystem.herokuapp.com/)
 
+## How to install on your local
+
+1. Clone the repository
+`$ git clone https://github.com/heena6883/LMS.git`
+
 ## Feature set
 
 The Learning Management System (LMS) provides the following features:
